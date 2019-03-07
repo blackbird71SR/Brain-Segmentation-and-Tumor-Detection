@@ -1,0 +1,423 @@
+Namespace(batch_size=1, data_path='../MRBrainS2018data/', gpu_id=0, lr=0.005, n_epoch=20, num_forest=3, resume=None, val_num=7)
+training data
+hist equalizing......
+get stacking......
+rotating......
+cropping......
+T1 mean =  94.34685735856247
+IR mean =  86.6350121148132
+T2 mean =  33.39210237435011
+getting edges
+transforming
+validating data
+hist equalizing......
+get stacking......
+cropping......
+T1 mean =  96.54966731173937
+IR mean =  100.21286429449135
+T2 mean =  26.279656170235725
+getting edges
+transforming
+training prepared, cost 87.14564108848572 seconds
+
+
+/usr/local/lib/python3.6/dist-packages/torch/nn/_reduction.py:49: UserWarning: size_average and reduce args will be deprecated, please use reduction='sum' instead.
+  warnings.warn(warning.format(ret))
+epoch:  1
+--------------------------------Training--------------------------------
+average loss in this epoch:  0.3801591008204628
+final loss in this epoch:  0.36809587478637695
+cost 776.6024258136749 seconds up to now
+cost 689.4509456157684 seconds in this train epoch
+/content/MRBrainS18/metrics.py:20: RuntimeWarning: invalid value encountered in true_divide
+  acc_cls = np.diag(hist) / hist.sum(axis=1)
+/content/MRBrainS18/metrics.py:22: RuntimeWarning: invalid value encountered in true_divide
+  iu = np.diag(hist) / (hist.sum(axis=1) + hist.sum(axis=0) - np.diag(hist))
+--------------------------------All tissues--------------------------------
+Back: Background,
+GM: Cortical GM(red), Basal ganglia(green),
+WM: WM(yellow), WM lesions(blue),
+CSF: CSF(pink), Ventricles(light blue),
+Back: Cerebellum(white), Brainstem(dark red)
+single predict: 
+Dice : 	 [0.99298447 0.71327431 0.66746153 0.71713954 0.36186023 0.74987826
+ 0.87769728 0.71266202 0.681975   0.                nan]
+Mean Dice : 	 0.6979220388859148
+--------------------------------Only tests--------------------------------
+tissue : Back , CSF , GM , WM
+single predict: 
+Dice : 	 [0.9886769  0.7686086  0.71765707 0.71637641]
+Mean Dice : 	 0.7346879650601283
+cost 797.0178844928741 seconds up to now
+cost 20.41545867919922 seconds in this validation epoch
+model saved!!!
+
+
+
+epoch:  2
+--------------------------------Training--------------------------------
+average loss in this epoch:  0.17737283849945756
+final loss in this epoch:  0.205351784825325
+cost 1509.3785917758942 seconds up to now
+cost 695.6646225452423 seconds in this train epoch
+--------------------------------All tissues--------------------------------
+Back: Background,
+GM: Cortical GM(red), Basal ganglia(green),
+WM: WM(yellow), WM lesions(blue),
+CSF: CSF(pink), Ventricles(light blue),
+Back: Cerebellum(white), Brainstem(dark red)
+single predict: 
+Dice : 	 [0.99238583 0.76799584 0.65988673 0.80211424 0.32268874 0.76882843
+ 0.89442285 0.83937919 0.66683908 0.                nan]
+Mean Dice : 	 0.7336425868296327
+--------------------------------Only tests--------------------------------
+tissue : Back , CSF , GM , WM
+single predict: 
+Dice : 	 [0.99041003 0.78313207 0.76536023 0.82900436]
+Mean Dice : 	 0.7931008141280618
+cost 1533.3004422187805 seconds up to now
+cost 23.921850442886353 seconds in this validation epoch
+model saved!!!
+
+
+
+epoch:  3
+--------------------------------Training--------------------------------
+average loss in this epoch:  0.159988383140963
+final loss in this epoch:  0.020675908774137497
+cost 2251.066572666168 seconds up to now
+cost 697.6556928157806 seconds in this train epoch
+--------------------------------All tissues--------------------------------
+Back: Background,
+GM: Cortical GM(red), Basal ganglia(green),
+WM: WM(yellow), WM lesions(blue),
+CSF: CSF(pink), Ventricles(light blue),
+Back: Cerebellum(white), Brainstem(dark red)
+single predict: 
+Dice : 	 [0.99315182 0.78252445 0.76493672 0.75320658 0.51496833 0.77183891
+ 0.91981368 0.89647311 0.85319516 0.                nan]
+Mean Dice : 	 0.7923900685149137
+--------------------------------Only tests--------------------------------
+tissue : Back , CSF , GM , WM
+single predict: 
+Dice : 	 [0.99149545 0.78802201 0.78477739 0.78036895]
+Mean Dice : 	 0.7843975372163765
+cost 2274.8473072052 seconds up to now
+cost 23.780734539031982 seconds in this validation epoch
+model saved!!!
+
+
+
+epoch:  4
+--------------------------------Training--------------------------------
+average loss in this epoch:  0.15235378861261636
+final loss in this epoch:  0.13553376495838165
+cost 3000.1610023975372 seconds up to now
+cost 699.166093826294 seconds in this train epoch
+--------------------------------All tissues--------------------------------
+Back: Background,
+GM: Cortical GM(red), Basal ganglia(green),
+WM: WM(yellow), WM lesions(blue),
+CSF: CSF(pink), Ventricles(light blue),
+Back: Cerebellum(white), Brainstem(dark red)
+single predict: 
+Dice : 	 [0.99509805 0.74070587 0.52361019 0.73900967 0.51215288 0.78310343
+ 0.91897023 0.79921028 0.82200231 0.                nan]
+Mean Dice : 	 0.7431369237287232
+--------------------------------Only tests--------------------------------
+tissue : Back , CSF , GM , WM
+single predict: 
+Dice : 	 [0.99161264 0.79620925 0.73876586 0.7568654 ]
+Mean Dice : 	 0.7644159078774626
+cost 3025.779743909836 seconds up to now
+cost 25.618741512298584 seconds in this validation epoch
+
+
+
+epoch:  5
+--------------------------------Training--------------------------------
+average loss in this epoch:  0.14815319108850286
+final loss in this epoch:  0.2017732411623001
+cost 3742.7414519786835 seconds up to now
+cost 693.6372921466827 seconds in this train epoch
+--------------------------------All tissues--------------------------------
+Back: Background,
+GM: Cortical GM(red), Basal ganglia(green),
+WM: WM(yellow), WM lesions(blue),
+CSF: CSF(pink), Ventricles(light blue),
+Back: Cerebellum(white), Brainstem(dark red)
+single predict: 
+Dice : 	 [0.99463706 0.76868335 0.69672956 0.76433766 0.53128866 0.77607682
+ 0.89140982 0.86516294 0.7978531  0.                nan]
+Mean Dice : 	 0.7695546605215965
+--------------------------------Only tests--------------------------------
+tissue : Back , CSF , GM , WM
+single predict: 
+Dice : 	 [0.99199394 0.78837545 0.76817051 0.79925893]
+Mean Dice : 	 0.7854043795386787
+cost 3767.904508113861 seconds up to now
+cost 25.163056135177612 seconds in this validation epoch
+
+
+
+epoch:  6
+--------------------------------Training--------------------------------
+average loss in this epoch:  0.12532211175656238
+final loss in this epoch:  0.04772009700536728
+cost 4489.275124073029 seconds up to now
+cost 694.1654934883118 seconds in this train epoch
+--------------------------------All tissues--------------------------------
+Back: Background,
+GM: Cortical GM(red), Basal ganglia(green),
+WM: WM(yellow), WM lesions(blue),
+CSF: CSF(pink), Ventricles(light blue),
+Back: Cerebellum(white), Brainstem(dark red)
+single predict: 
+Dice : 	 [0.9955007  0.79524368 0.7904424  0.77414147 0.60144103 0.81048933
+ 0.92190662 0.90610479 0.8468263  0.                nan]
+Mean Dice : 	 0.8125542861026611
+--------------------------------Only tests--------------------------------
+tissue : Back , CSF , GM , WM
+single predict: 
+Dice : 	 [0.99355548 0.82121328 0.79731999 0.80331628]
+Mean Dice : 	 0.8073699441637239
+cost 4512.872887134552 seconds up to now
+cost 23.597763061523438 seconds in this validation epoch
+model saved!!!
+
+
+
+epoch:  7
+--------------------------------Training--------------------------------
+average loss in this epoch:  0.1224661348772213
+final loss in this epoch:  0.20573101937770844
+cost 5229.407052278519 seconds up to now
+cost 695.3149683475494 seconds in this train epoch
+--------------------------------All tissues--------------------------------
+Back: Background,
+GM: Cortical GM(red), Basal ganglia(green),
+WM: WM(yellow), WM lesions(blue),
+CSF: CSF(pink), Ventricles(light blue),
+Back: Cerebellum(white), Brainstem(dark red)
+single predict: 
+Dice : 	 [0.99535776 0.78344588 0.80475581 0.77821454 0.5849238  0.80094973
+ 0.913965   0.90657172 0.83675488 0.                nan]
+Mean Dice : 	 0.8082444088329164
+--------------------------------Only tests--------------------------------
+tissue : Back , CSF , GM , WM
+single predict: 
+Dice : 	 [0.99345678 0.81186491 0.78624218 0.80694764]
+Mean Dice : 	 0.8017872038076507
+cost 5253.598997592926 seconds up to now
+cost 24.19194531440735 seconds in this validation epoch
+
+
+
+epoch:  8
+--------------------------------Training--------------------------------
+average loss in this epoch:  0.12115533102741292
+final loss in this epoch:  0.23429812490940094
+cost 5969.81130862236 seconds up to now
+cost 695.4566655158997 seconds in this train epoch
+--------------------------------All tissues--------------------------------
+Back: Background,
+GM: Cortical GM(red), Basal ganglia(green),
+WM: WM(yellow), WM lesions(blue),
+CSF: CSF(pink), Ventricles(light blue),
+Back: Cerebellum(white), Brainstem(dark red)
+single predict: 
+Dice : 	 [0.99526691 0.77992588 0.80757615 0.78312517 0.59758513 0.79765044
+ 0.91310806 0.90887827 0.83430917 0.                nan]
+Mean Dice : 	 0.8093805174917328
+--------------------------------Only tests--------------------------------
+tissue : Back , CSF , GM , WM
+single predict: 
+Dice : 	 [0.99338893 0.80887509 0.78294389 0.8076891 ]
+Mean Dice : 	 0.7999542705894064
+cost 5993.117507219315 seconds up to now
+cost 23.306198596954346 seconds in this validation epoch
+
+
+
+epoch:  9
+--------------------------------Training--------------------------------
+average loss in this epoch:  0.1198105587035108
+final loss in this epoch:  0.1768488883972168
+cost 6715.862134218216 seconds up to now
+cost 699.5348632335663 seconds in this train epoch
+--------------------------------All tissues--------------------------------
+Back: Background,
+GM: Cortical GM(red), Basal ganglia(green),
+WM: WM(yellow), WM lesions(blue),
+CSF: CSF(pink), Ventricles(light blue),
+Back: Cerebellum(white), Brainstem(dark red)
+single predict: 
+Dice : 	 [0.99534372 0.77028671 0.81212312 0.73901032 0.58368934 0.80355722
+ 0.91534863 0.91257972 0.84383427 0.                nan]
+Mean Dice : 	 0.8053327329363692
+--------------------------------Only tests--------------------------------
+tissue : Back , CSF , GM , WM
+single predict: 
+Dice : 	 [0.99352444 0.81453079 0.77423003 0.76352136]
+Mean Dice : 	 0.7844949691562826
+cost 6739.538295269012 seconds up to now
+cost 23.67616105079651 seconds in this validation epoch
+
+
+
+epoch:  10
+--------------------------------Training--------------------------------
+average loss in this epoch:  0.11898791446232747
+final loss in this epoch:  0.10931830108165741
+cost 7458.898721218109 seconds up to now
+cost 695.0349953174591 seconds in this train epoch
+--------------------------------All tissues--------------------------------
+Back: Background,
+GM: Cortical GM(red), Basal ganglia(green),
+WM: WM(yellow), WM lesions(blue),
+CSF: CSF(pink), Ventricles(light blue),
+Back: Cerebellum(white), Brainstem(dark red)
+single predict: 
+Dice : 	 [0.99531286 0.79382818 0.80162313 0.79192559 0.54481099 0.80586378
+ 0.91080024 0.90289302 0.8353443  0.                nan]
+Mean Dice : 	 0.8067061588925053
+--------------------------------Only tests--------------------------------
+tissue : Back , CSF , GM , WM
+single predict: 
+Dice : 	 [0.99330368 0.81664207 0.79590172 0.81122509]
+Mean Dice : 	 0.8079874344483878
+cost 7483.1442222595215 seconds up to now
+cost 24.245501041412354 seconds in this validation epoch
+
+
+
+epoch:  11
+--------------------------------Training--------------------------------
+average loss in this epoch:  0.11562185020874806
+final loss in this epoch:  0.22672879695892334
+cost 8196.127002239227 seconds up to now
+cost 695.2219905853271 seconds in this train epoch
+--------------------------------All tissues--------------------------------
+Back: Background,
+GM: Cortical GM(red), Basal ganglia(green),
+WM: WM(yellow), WM lesions(blue),
+CSF: CSF(pink), Ventricles(light blue),
+Back: Cerebellum(white), Brainstem(dark red)
+single predict: 
+Dice : 	 [0.99517665 0.78655752 0.80817396 0.77652412 0.6140661  0.80310879
+ 0.91311134 0.90406313 0.84176786 0.                nan]
+Mean Dice : 	 0.811898291995885
+--------------------------------Only tests--------------------------------
+tissue : Back , CSF , GM , WM
+single predict: 
+Dice : 	 [0.99323589 0.81380739 0.78914967 0.80122132]
+Mean Dice : 	 0.8014773708884104
+cost 8220.180163145065 seconds up to now
+cost 24.053160905838013 seconds in this validation epoch
+
+
+
+epoch:  12
+--------------------------------Training--------------------------------
+average loss in this epoch:  0.11520292576893247
+final loss in this epoch:  0.005169310141354799
+cost 8932.976113796234 seconds up to now
+cost 695.1129486560822 seconds in this train epoch
+--------------------------------All tissues--------------------------------
+Back: Background,
+GM: Cortical GM(red), Basal ganglia(green),
+WM: WM(yellow), WM lesions(blue),
+CSF: CSF(pink), Ventricles(light blue),
+Back: Cerebellum(white), Brainstem(dark red)
+single predict: 
+Dice : 	 [0.99515299 0.7704299  0.8065473  0.76926422 0.57808884 0.79518701
+ 0.90922636 0.89857437 0.84391765 0.                nan]
+Mean Dice : 	 0.8035929838483349
+--------------------------------Only tests--------------------------------
+tissue : Back , CSF , GM , WM
+single predict: 
+Dice : 	 [0.99310323 0.80635399 0.7738992  0.79030686]
+Mean Dice : 	 0.7903317838800561
+cost 8957.552431106567 seconds up to now
+cost 24.576317310333252 seconds in this validation epoch
+
+
+
+epoch:  13
+--------------------------------Training--------------------------------
+average loss in this epoch:  0.11496127434451862
+final loss in this epoch:  0.005785991903394461
+cost 9673.563108921051 seconds up to now
+cost 695.8248481750488 seconds in this train epoch
+--------------------------------All tissues--------------------------------
+Back: Background,
+GM: Cortical GM(red), Basal ganglia(green),
+WM: WM(yellow), WM lesions(blue),
+CSF: CSF(pink), Ventricles(light blue),
+Back: Cerebellum(white), Brainstem(dark red)
+single predict: 
+Dice : 	 [0.9951356  0.78138879 0.80623205 0.77545109 0.58657825 0.80096521
+ 0.91313101 0.90308541 0.84409981 0.                nan]
+Mean Dice : 	 0.8083309019979131
+--------------------------------Only tests--------------------------------
+tissue : Back , CSF , GM , WM
+single predict: 
+Dice : 	 [0.99316719 0.81182308 0.78423686 0.79777542]
+Mean Dice : 	 0.7980506727360511
+cost 9697.441863536835 seconds up to now
+cost 23.87875461578369 seconds in this validation epoch
+
+
+
+epoch:  14
+--------------------------------Training--------------------------------
+average loss in this epoch:  0.1147675888006204
+final loss in this epoch:  0.0737825483083725
+cost 10410.886044502258 seconds up to now
+cost 693.9961621761322 seconds in this train epoch
+--------------------------------All tissues--------------------------------
+Back: Background,
+GM: Cortical GM(red), Basal ganglia(green),
+WM: WM(yellow), WM lesions(blue),
+CSF: CSF(pink), Ventricles(light blue),
+Back: Cerebellum(white), Brainstem(dark red)
+single predict: 
+Dice : 	 [0.99509324 0.77443391 0.81049383 0.77498188 0.59749417 0.79535125
+ 0.91051887 0.90090713 0.83432061 0.                nan]
+Mean Dice : 	 0.8062648575852751
+--------------------------------Only tests--------------------------------
+tissue : Back , CSF , GM , WM
+single predict: 
+Dice : 	 [0.99306926 0.80650156 0.77763039 0.79743416]
+Mean Dice : 	 0.7939753628998361
+cost 10433.930209636688 seconds up to now
+cost 23.04416513442993 seconds in this validation epoch
+
+
+
+epoch:  15
+--------------------------------Training--------------------------------
+average loss in this epoch:  0.11456970390702385
+final loss in this epoch:  0.14374719560146332
+cost 11149.83125948906 seconds up to now
+cost 695.2598209381104 seconds in this train epoch
+--------------------------------All tissues--------------------------------
+Back: Background,
+GM: Cortical GM(red), Basal ganglia(green),
+WM: WM(yellow), WM lesions(blue),
+CSF: CSF(pink), Ventricles(light blue),
+Back: Cerebellum(white), Brainstem(dark red)
+single predict: 
+Dice : 	 [0.99517159 0.7748167  0.80541675 0.76748226 0.58198005 0.79835348
+ 0.91118912 0.90127254 0.8356819  0.                nan]
+Mean Dice : 	 0.8040982465535609
+--------------------------------Only tests--------------------------------
+tissue : Back , CSF , GM , WM
+single predict: 
+Dice : 	 [0.99316135 0.80947224 0.77781542 0.78904945]
+Mean Dice : 	 0.7922550650635498
+cost 11174.056064844131 seconds up to now
+cost 24.22480535507202 seconds in this validation epoch
+
+
+
