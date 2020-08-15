@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/papaya.css' %}" />
+<script type="text/javascript" src="{% static 'js/papaya.js' %}"></script>
+
+<h1> Your input .nii file is : </h1>
+
+<script type="text/javascript">
+            var params = [];
+            params["images"] = ["/media/input/{{ object.image.name }}"];
+</script>
+
+<div class="papaya" data-params="params"></div>
+
+<br><br>
+
+<a href="{% url 'output_image' pk=object.id %}">Analyse</a>
+
+{% endblock %}

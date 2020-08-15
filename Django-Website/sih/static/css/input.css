@@ -1,0 +1,28 @@
+.container1
+{
+	border-radius: 5px;
+  width: 500px;
+  height: 250px;
+  background-color: lightgrey;
+  margin-top: 100px;
+  margin-left: 250px;
+  padding: 60px;
+}
+.input1
+{
+	background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+    font-family: sans-serif;
+  margin-top: 10px;
+}
+.inputform
+{
+	
+
+	font-size: 20px;
+}

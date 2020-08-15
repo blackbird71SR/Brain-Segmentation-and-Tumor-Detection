@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<h4 aligh="left">MRI is a very popular technique to detect tumours. MRI creates cross-section pictures of your insides. But MRI uses strong magnets to make the images – not radiation. An MRI scan takes cross-sectional slices (views) from many angles, as if someone were looking at a slice of your body from the front, from the side, or from above your head. MRI creates pictures of soft tissue parts of the body that are sometimes hard to see using other imaging tests.MRI is very good at finding and pinpointing some cancers. An MRI with contrast dye is the best way to see brain and spinal cord tumors</h4>
+
+<img align="right" src="{% static 'brain1.png' %}" alt="brain pictures">
+
+<div>
+	<h4>Our network architecture was inspired by the U-Net and has been carefully modified to maximize brain tumor segmentation performance. We use a dice loss function to cope with class imbalances and use extensive data augmentation to successfully prevent overfitting. Our method beats the current state of the art on BraTS 2015 and shows promising results on the BraTS 2017 validation set (dice scores of 0.896, 0.797 and 0.732 for whole tumor, tumor core and enhancing tu- mor, respectively). We furthermore take part in the survival prediction subchallenge by training an ensemble of a random forest regressor and a multilayer perceptron ensemble on shape features describing the tu- mor subregions. Our ensemble achieves 335.08 root mean squared error (232.76 mean absolute error) in a five fold cross-validation over the 163 training cases.
+</h4>
+</div>
+<hr>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h2 align="center"> How the model works? <br><Br></h2>
+<div>
+	<img align="right" src="{% static 'model.png' %}" alt="model procedure">
+</div>
+<div >
+	<h4><b>Data preprocessing </b>With MRI intensity values being non standardized, nor- malization is critical to allow for data from different institutes, scanners and acquired with varying protocols to be processed by one single algorithm. This is particularly true for neural networks where imaging modalities are typically treated as color channels. Here we need to ensure that the value ranges match not only between patients but between the modalities as well in order to avoid initial biases of the network. We found the following simple workflow to work surprisingly well. First, we normalize each modality of each patient indepen- dently by subtracting the mean and dividing by the standard deviation of the brain region. We then clip the resulting images at [−5, 5] to remove outliers and subsequently rescale to [0, 1], with the non-brain region being set to 0.</h4>
+</div>
+<hr>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h2 align="center"> Network Architecture & Training? <br><Br></h2>
+<div ">
+
+	<h4><b>Network architecture </b>Our network is inspired by the U-Net architecture [9]. We designed the network to process large 3D input blocks of 128x128x128 voxels.our architecture comprises a context aggregation pathway that encodes increasingly abstract representations of the input as we progress deeper into the network, followed by a localization pathway that re- combines these representations with shallower features to precisely localize the structures of interest
+	</h4>
+	</div>
+	<hr>
+	
+	<div>
+		<h4> <b>Training Procedure</b> Our network architecture is trained with randomly sam-
+pled patches of size 128x128x128 voxels and batch size 2. We refer to an epoch
+as an iteration over 100 batches and train for a total of 300 epochs. Training is
+done using the ADAM optimizer with an initial learning rate lrinit = 5 · 10−4,
+the following learning rate schedule: lrinit · 0.985epoch and a l2 weight decay of 10−5 .</h4>
+<img style="background-color:red;" align="center" src="{% static 'formula.png' %}" alt="training formula">
+
+<h4>where u is the softmax output of the network and v is a one hot encoding of the ground truth segmentation map. Both u and v have shape i by c with i being the number of pixels in the training patch and k ∈ K being the classes.</h4>
+	</div>
+	<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+{% endblock %}

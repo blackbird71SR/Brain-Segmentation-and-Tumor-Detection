@@ -1,0 +1,9 @@
+#!/home/blackbird98/Downloads/SIH/prediction_1/sih/test/bin/python3
+"""PAR/REC to NIfTI converter
+"""
+
+from nibabel.cmdline.parrec2nii import main
+
+
+if __name__ == '__main__':
+    main()
